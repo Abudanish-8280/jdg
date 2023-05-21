@@ -825,8 +825,9 @@ header ul.menutop li a {
     margin: 36px 0 0;
 }
 .heading, .leftheading {
-    margin-bottom: 25px;
-    font-size: 40px;
+    margin-bottom: 18px;
+    font-size: 30px;
+    line-height: normal;
 }
 .whatwedo {
     text-align: center;
@@ -1107,7 +1108,7 @@ header ul.menutop {
     border: none;
 }
 .investment {
-    background: url(../images/investment-bobile-bg.jpg);
+    background: url(../images/investment-bobile-bg.jpg)no-repeat center top/cover;
     padding: 58% 0 50px;
 }
 .team .heading {
@@ -1171,6 +1172,9 @@ footer ul.footer-contact li:first-child {
     text-align: center;
     margin-bottom: 15px;
 }
+.description {
+    width: 100%;
+}
 }
 
 
@@ -1195,9 +1199,6 @@ footer ul.footer-contact li:first-child {
 .homeabout img {
     height: 320px;
     object-fit: cover;
-}
-.heading {
-    font-size: 40px;
 }
 .whatwedo-mobienav {
     padding: 0;
@@ -1247,7 +1248,13 @@ footer ul.footer-contact li:last-child:before {
 .portfolio-cnt {
     margin-bottom: 50px;
 }
-
+.about-whatwedo {
+    margin-top: 40px;
+}
+.aboutustop-content {
+    padding: 20px 20px 0;
+    margin: -40px auto 0;
+}
 .about-whatwedo button.slick-prev.slick-arrow, .about-whatwedo button.slick-next.slick-arrow {
     bottom: 47%;
     height: 45px;
@@ -1286,13 +1293,6 @@ footer ul.footer-contact li:last-child:before {
     border: 1px solid var(--white);
     color: var(--white);
     padding: 12px 20px;
-}
-.homeabout {
-    padding: 30px 0;
-}
-.about-content .leftheading{
-    margin-bottom: 15px;
-    font-size: 40px;
 }
 .investment .leftheading {
     font-size: 30px;
