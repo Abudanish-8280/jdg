@@ -1,0 +1,1406 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: copperplate;
+  src: url(copperplate-gothic-bold-regular.ttf);
+}
+
+:root {
+    --white: #fff;
+    --black: #111;
+}
+
+body {
+    margin: 0;
+    padding: 0 !important;
+    
+    scroll-behavior: smooth;
+    overflow: inherit !important;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], input[type="tel"], input[type="date"], textarea, select {
+    color: #444;
+    font-size: 15px;
+    line-height: normal;
+    margin: 0 0 20px;
+    padding: 15px 20px;
+    width: 100%;
+    outline: 0;
+    border-radius: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: var(--white);
+    border: none;
+    border-bottom: 1px solid #45575d;
+    resize: none;
+}
+
+select, input[type="date"] {
+    padding: 14px 17px;
+}
+
+input[type="submit"] {
+    color: var(--white);
+    background: var(--gradient);
+    text-transform: uppercase;
+    border: none;
+    padding: 11px 30px;
+    font-size: 14px;
+    border: 0;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    outline: none;
+    font-weight: 600;
+    border-radius: 34px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input[type="submit"]:hover {
+    background: var(--secondary);
+    color: var(--white);
+    transition: 0.8s;
+}
+
+textarea {
+    height: 100px;
+    margin-bottom: 5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 15px 0;
+    font-family: 'copperplate';
+    color: #000000;
+    font-weight: 500;
+    text-transform: inherit;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 28px
+}
+
+h2 {
+    font-size: 24px
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 18px
+}
+
+h6 {
+    font-size: 16px
+}
+
+p {
+    padding: 0;
+    margin: 0 0 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #000000;
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 400;
+}
+
+ul, li, a {
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #000000;
+    line-height: 27px;
+    font-size: 15px;
+}
+
+a:hover {
+    transition: 0.8s;
+    text-decoration: none;
+}
+
+.heading, .leftheading {
+    margin-bottom: 35px;
+    font-size: 50px;
+    position: relative;
+    font-weight: 800;
+    display: block;
+    line-height: 52px;
+    text-transform: uppercase;
+}
+.heading{
+    text-align: center;
+}
+.description {
+    width: 90%;
+    font-size: 16px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+/* HEADER SECTION CSS */
+
+header {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+}
+header ul.menutop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .menucontainer ul li.dropdown {
+    position: relative;
+}
+
+header .menucontainer ul li.dropdown ul.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    z-index: 2;
+    background: var(--white);
+    display: none;
+    box-shadow: 0 0 12px #0000001a;
+}
+
+header .menucontainer ul li.dropdown:hover ul.dropdown-content {
+    display: block;
+}
+
+header .menucontainer ul li.dropdown ul.dropdown-content li a {
+    padding: 10px 18px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    color: var(--black);
+    text-align: left;
+    font-size: 14px;
+}
+
+header .menucontainer ul li.dropdown ul li {
+    display: block;
+}
+header .menucontainer>ul li.dropdown>a:after {
+    position: absolute;
+    content: '\f107';
+    top: 29px;
+    right: 6px;
+    font-family: 'Font Awesome 5 Free';
+    font-size: 11px;
+}
+header ul.menutop li a {
+    display: inline-block;
+    padding: 28px 25px;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+    color: var(--white);
+    letter-spacing: .5px;
+}
+.btn-primary:before{
+    position: absolute;
+    top: 23px;
+    left: -25px;
+    content: '';
+    width: 35px;
+    height: 1px;
+    background: var(--black);
+}
+.btn-primary:after{
+    position: absolute;
+    top: 23px;
+    right: -25px;
+    content: '';
+    width: 35px;
+    height: 1px;
+    background: var(--black);
+}
+.responsive-menu {
+    display: none;
+}
+.responsive-menu ul li a {
+    font-weight: 500;
+    margin: 6px 0;
+    display: inline-block;
+}
+.responsive-menu button.btn-close {
+    display: block;
+    padding: 14px;
+    position: absolute;
+    right: 0;
+    left: auto;
+    color: #d80505 !important;
+}
+
+/* SLIDER SECTION CSS */
+
+
+.mainslider, .breadcrumb {
+    position: relative;
+}
+.mainslider img {
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+}
+.breadcrumb img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+}
+.slider-caption {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    text-align: center;
+    width: 700px;
+    max-width: 700px;
+}
+.breadcrumb-caption {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    text-align: center;
+    max-width: 700px;
+}
+
+.slider-caption h1{
+    color: var(--white);
+    font-size: 50px;
+    margin-bottom: 40px;
+    line-height: 67px;
+}
+.breadcrumb-caption h1 {
+    color: var(--white);
+    font-size: 56px;
+    margin-bottom: 0;
+}
+.slider-caption .btn-primary {
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+.slider-caption .btn-primary:before, .slider-caption .btn-primary:after{
+	background: var(--white);
+}
+
+
+
+/* HOMEABOUT SECTION CSS */
+
+
+.homeabout {
+    padding: 80px 0;
+}
+.homeabout .row {
+    align-items: center;
+}
+
+.homeabout img {
+    width: 100%;
+    height: auto;
+    float: right;
+}
+.about-content {
+    padding-left: 50px;
+}
+.about-content .btn-primary {
+    margin-top: 25px;
+}
+
+/* WHAT WE DO SECTION */
+
+.whatwedo {
+    padding-bottom: 70px;
+}
+.whatwedo .row {
+    align-items: flex-end;
+}
+.whatwedo-nav{
+    position: relative;
+    left: 4px;
+}
+.whatwedo-nav .nav-link {
+    position: relative;
+}
+.whatwedo-nav .nav-link.active:before {
+    position: absolute;
+    content: '\f0d9';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    transform: rotate(45deg);
+    left: -15px;
+    top: -15px;
+}
+.whatwedo-nav:before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border: 1px solid #000;
+    left: 0;
+    top: 0;
+}
+
+.whatwedo-nav .nav {
+    position: relative;
+    left: -3px;
+    top: -20px;
+}
+.whatwedo img {
+    width: 100%;
+}
+.whatwedo-mobienav {
+    display: none;
+}
+.whatwedo-nav button {
+    text-align: left;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 50px;
+    color: #818181;
+    letter-spacing: 1px;
+    background: var(--white) !important;
+    display: inline-block;
+    width: 80%;
+}
+.whatwedo h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.whatwedo-nav a.portfolio-btn {
+    position: relative;
+    font-weight: 500;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+    display: block;
+    margin: 60px 60px 0 0;
+    bottom: 13px;
+}
+
+.whatwedo-nav a.portfolio-btn:after {
+    position: absolute;
+    content: '';
+    width: 35px;
+    height: 1px;
+    background: #000;
+    top: 13px;
+    right: -40px;
+}
+.whatwedo-cnt {
+    position: relative;
+}
+
+.whatwedo-cnt h3 {
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+/* INVESTMENT SECTION CSS */
+
+.investment {
+    background: url(../images/investment-bg.jpg)no-repeat;
+    padding: 80px 0;
+    background-size: cover;
+    background-position: 0;
+}
+.investment .leftheading {
+    color: var(--white);
+    line-height: 60px;
+}
+.investment p{
+color:var(--white);
+}
+
+/* TEAM SECTION CSS */
+
+.team {
+    background: url(../images/team-bg.jpg)no-repeat center center/cover;
+    text-align: center;
+    padding: 80px 0;
+}
+.team .team-list {
+    margin: 0 .5px;
+    text-align:center;
+}
+
+.team-list h3 {
+    margin: 25px 0 0;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.team-list h3 span {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: #585858;
+    font-weight: 500;
+}
+.team-list img {
+    width: 100%;
+}
+.team_arrow {
+    position: absolute;
+    left: 0;
+    top: 42%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.team_arrow.team_prevarrow.slick-arrow {
+    left: -35px;
+}
+
+.team_arrow.team_nextarrow.slick-arrow {
+    right: -35px;
+    left: auto;
+}
+
+/* PORTFOLIO SECTION CSS */
+
+.portfolio {
+    padding: 80px 0;
+}
+.portfolio .row {
+    align-items: center;
+}
+.portfolio ul#pills-tab {
+    justify-content: center;
+    margin-bottom: 40px !important;
+}
+
+.portfolio ul#pills-tab li a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 0;
+    font-family: 'copperplate';
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0 8px;
+    color: 858585;
+}
+
+.portfolio ul#pills-tab .nav-link.active {
+    border-color: var(--black);
+    color: var(--black);
+}
+.portfolio figure img {
+    width: 100%;
+}
+
+.portfolio .row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.portfolio .row:nth-child(even) figure span {
+    padding: 0 78px 0 0;
+    right: 100%;
+}
+.portfolio .row:nth-child(even) .portfolio-cnt {
+    text-align: right;
+}
+.portfolio .row:nth-child(even) figure span:before {
+    right: 0;
+    left: auto;
+}
+
+.portfolio figure {
+    position: relative;
+}
+
+.portfolio figure span {
+    position: absolute;
+    padding-left: 78px;
+    top: 23px;
+}
+
+.portfolio figure span:before {
+    position: absolute;
+    content: '';
+    width: 70px;
+    height: 1px;
+    background: black;
+    left: 0;
+    top: 13px;
+}
+.portfolio-cnt a {
+    display: inline-block;
+    font-size: 17px;
+}
+
+.portfolio-cnt a img {
+    width: 28px;
+    margin-left: 2px;
+}
+
+/* FOOTER SECTION CSS */
+
+footer {
+    background: #000000;
+    padding: 60px 0 0;
+    position: relative;
+}
+footer>img {
+    opacity: .07;
+    position: absolute;
+    bottom: 68px;
+    width: 340px;
+    height: auto;
+    right: 120px;
+}
+footer figure img {
+    width: 100%;
+}
+footer ul.menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer ul.menu li {
+    display: inline-block;
+    width: 37%;
+}
+
+footer ul li.menu-item a:before {
+    position: absolute;
+    content: '';
+    top: 12px;
+    left: 0;
+    width: 20px;
+    height: 1px;
+    background: #cacaca;
+}
+
+footer ul li.menu-item a {
+    display: inline-block;
+    margin: 15px 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-left: 28px;
+    position: relative;
+}
+footer ul.footer-contact {
+    display: flex;
+    align-items: center;
+}
+
+footer ul.footer-contact li {
+    width: 42.5%;
+}
+
+footer ul.footer-contact li:last-child a:first-child {
+    font-size: 24px;
+    line-height: normal;
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 500;
+}
+footer a:hover {
+    color: var(--primary);
+}
+
+footer p {
+    margin: 20px 0;
+}
+
+footer ul.socialicon {
+    display: flex;
+    column-gap: 20px;
+    justify-content: flex-start;
+    width: 57.5%;
+    margin: 20px 0 0 auto;
+}
+
+footer ul.socialicon li a {
+    font-size: 20px;
+}
+
+footer ul.socialicon li a:hover {
+    color: var(--primary);
+}
+
+footer ul li, footer ul li a, footer p, footer a {
+    color: #cacaca;
+}
+.ftr-nav {
+    display: none;
+}
+
+.copyright {
+    margin-top: 35px;
+    padding: 15px 0;
+    background: #000000;
+}
+.copyright p {
+    margin: 0;
+}
+
+
+.secondary-container {
+    padding: 80px 0;
+}
+
+/* ABOUTUS PAGE CSS */
+
+
+.aboutustop img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.aboutustop {
+    position: relative;
+}
+
+.aboutustop-content {
+    width: 60%;
+    margin-left: auto;
+    background: var(--white);
+    padding: 45px 45px 0;
+    margin-top: -120px;
+    position: relative;
+}
+.aboutustop-content p {
+    margin-bottom: 20px;
+}
+.aboutustop-content p:last-child {
+    margin: 0;
+}
+.aboutustop-content p a {
+    color: #0d6efd;
+}
+
+.aboutustop-content a.btn {
+    margin-top: 15px;
+}
+
+.about-whatwedo {
+    margin-top: 80px;
+}
+
+.about-whatwedo .nav li a {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 0px 15px;
+    color: #a1a1a1;
+}
+
+.about-whatwedo .nav {
+    justify-content: center;
+}
+
+.whatwedolist {
+    margin: 0 !important;
+    position: relative;
+}
+.about-whatwedo button.slick-prev.slick-arrow, 
+.about-whatwedo button.slick-next.slick-arrow{
+    bottom: 25px;
+    top: auto;
+    height: 50px;
+    width: 50px;
+}
+.about-whatwedo button.slick-next.slick-arrow {
+    left: 90px;
+}
+.about-whatwedo button.slick-prev.slick-arrow {
+    left: 30px;
+}
+
+.about-whatwedo button.slick-prev.slick-arrow:after, .about-whatwedo button.slick-next.slick-arrow:after{
+    background: var(--white);
+}
+.whatwedolist-info {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background: #e9f0f2;
+    padding: 40px;
+    width: 40%;
+}
+.whatwedolist-info p {
+    margin: 30px 0 0;
+}
+.whatwedolist img {
+    width: 100%;
+    height: auto;
+}
+
+/* CONTACT US PAGE CSS */
+
+.secondary-container.contactus h2.leftheading {
+    font-size: 26px;
+    margin: 0;
+}
+
+.secondary-container.contactus p {
+    margin: 12px 0 35px;
+}
+.secondary-container.contactus form label {
+    font-weight: 500;
+}
+
+.secondary-container.contactus form label span {
+    color: #bd1111;
+    margin-left: 3px;
+}
+.secondary-container.contactus ul {
+    margin-top: 50px;
+}
+
+.secondary-container.contactus ul li {
+    font-weight: 500;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+}
+
+.secondary-container.contactus ul li i {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--black);
+    font-size: 17px;
+}
+
+.secondary-container.contactus ul li:nth-child(2) a {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.secondary-container.contactus ul li:last-child a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+
+.secondary-container.team {
+    background: no-repeat;
+}
+
+.secondary-container.team button.slick-prev.slick-arrow, .secondary-container.team button.slick-next.slick-arrow{
+    display: none !important;
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+.logo img {
+    width: 350px;
+}
+header ul.menutop li a {
+    padding: 28px 18px;
+    font-size: 14px;
+}
+.mainslider img {
+    height: 800px;
+}
+.about-content {
+    padding-left: 0;
+    text-align: center;
+    margin: 36px 0 0;
+}
+.heading, .leftheading {
+    margin-bottom: 25px;
+    font-size: 40px;
+}
+.whatwedo {
+    text-align: center;
+}
+.whatwedo-nav {
+    display: none;
+}
+.whatwedo-mobienav {
+    display: block;
+}
+.whatwedo-mobienav .navbar {
+    justify-content: space-between;
+    border: 1px solid #000;
+    padding: 10px 15px;
+}
+.whatwedo-mobienav .navbar button {
+    padding: 0;
+}
+
+.whatwedo-mobienav .navbar h3 {
+    font-size: 18px;
+}
+.whatwedo-cnt {
+    margin-top: 15px;
+}
+.whatwedo-mobienav .nav-link {
+    font-size: 17px;
+    line-height: 35px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.whatwedo-mobienav .navbar-light .navbar-toggler {
+    border: none;
+}
+.investment {
+    text-align: center;
+}
+.portfolio {padding: 60px 0;}
+.portfolio-cnt {
+    text-align: center;
+	padding-top: 30px;
+}
+.portfolio figure span {
+    padding-left: 0;
+    left: 50%;
+    transform: translate(-50%);
+    top: -65px;
+    font-weight: 400;
+    font-size: 19px;
+}
+.portfolio figure span:before {
+    position: absolute;
+    content: '';
+    width: .3px;
+    height: 60px;
+    background: black;
+    left: 20px;
+    top: 40px;
+}
+.portfolio .row:nth-child(even) figure span:before {
+    left: 20px !important;
+}
+.portfolio .row:nth-child(even) figure span {
+    padding: 0 40px 0 0;
+    right: 100%;
+}
+.portfolio .row:nth-child(even) .portfolio-cnt {
+    text-align: center;
+}
+.portfolio ul#pills-tab {
+    margin-bottom: 115px !important;
+}
+.portfolio-cnt {margin-bottom: 70px;}
+.portfolio-cnt h3{margin:0;}
+.portfolio .row:last-child .portfolio-cnt{
+    margin: 0;
+}
+footer {
+    text-align: center;
+}
+footer figure img {
+    width: 400px;
+}
+.desktop-menu {
+    display: none;
+}
+.ftr-nav {
+    display: block;
+    margin-top: 15px;
+}
+footer ul.footer-contact li:first-child {
+    text-align: left;
+    order: 2;
+}
+footer ul.footer-contact li:last-child {
+    text-align: right;
+    position: relative;
+    border-right: 1px solid var(--white);
+    padding-right: 20px;
+    margin-right: 20px;
+}
+footer ul.footer-contact {
+    justify-content: center;
+}
+footer ul.socialicon {
+    justify-content: center;
+    width: 100%;
+}
+footer ul.footer-contact li:last-child a:first-child {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--white);
+}
+footer ul.footer-contact li:last-child a:last-child {
+    font-size: 16px;
+    color: var(--white);
+}
+footer ul.footer-contact strong {
+    font-size: 16px;
+    color: var(--white);
+    font-weight: 500;
+}
+.socialicon li i {
+    color: var(--white);
+    font-size: 20px;
+}
+footer>img {
+    display: none;
+}
+.ftr-nav .bg-dark {
+    border: 1px solid #e9e9e9;
+    background: none !important;
+    padding: 16px 0;
+}
+.ftr-nav .bg-dark span {
+    color: var(--white);
+}
+.ftr-nav .navbar-dark .navbar-toggler {
+    border: none;
+    right: 0;
+    position: absolute;
+}
+footer ul.menu li {
+    width: 50%;
+    text-align: left;
+}
+footer ul li.menu-item a:before {
+display:none;
+}
+footer ul li.menu-item a {
+    padding-left: 0;
+    margin: 12px 0 0;
+    color: #fff;
+    font-size: 14px;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.copyright {
+    margin-top: 0;
+    padding: 15px 0;
+}
+.aboutustop-content {
+    width: 90%;
+    padding: 30px 30px 0;
+    margin: -60px auto 0;
+    text-align: center;
+}
+.aboutustop-content p{
+    text-align: left;
+}
+.secondary-container {
+    padding: 40px 0;
+}
+
+.secondary-container.team {
+    padding: 60px 0;
+}
+.secondary-container.team .heading {
+    margin-bottom: 60px;
+}
+.secondary-container.contactus {
+    text-align: center;
+}
+.secondary-container.contactus form .col-sm-6,.secondary-container.contactus form .col-sm-12 {
+    text-align: left;
+}
+textarea {
+    height: 70px;
+}
+.secondary-container.contactus form .col-sm-12.my-5 {
+    text-align: center;
+    margin: 30px 0 !important;
+}
+.secondary-container.contactus .col-sm-12, .secondary-container.contactus form .col-sm-12:last-child {
+    text-align: center;
+}
+.secondary-container.contactus ul li {
+    text-align: left;
+    font-size: 18px;
+}
+.secondary-container.contactus ul {
+    width: 50%;
+    margin: 50px auto 0;
+}
+.secondary-container.contactus ul li a {
+    font-size: 18px;
+}
+.secondary-container.contactus form {
+    margin-bottom: 40px;
+}
+
+
+.whatwedolist-info {
+    position: relative;
+    width: 90%;
+    margin: -40px auto 0;
+}
+.about-whatwedo button.slick-prev.slick-arrow, .about-whatwedo button.slick-next.slick-arrow {
+    bottom: 45%;
+}
+.about-whatwedo button.slick-prev.slick-arrow {
+    right: 95px;
+    left: auto;
+}
+.about-whatwedo button.slick-next.slick-arrow {
+    right: 35px;
+    left: auto;
+}
+}
+
+
+@media screen and (max-width: 768px) {
+.responsive-menu {
+    display: block;
+}
+header ul.menutop {
+    display: none;
+}
+.menucontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slider-caption h1 {
+    font-size: 45px;
+}
+.slider-caption {
+    top: 50%;
+}
+.mainslider img {
+    height: 700px;
+}
+
+.homeabout {
+    padding: 40px 0 40px;
+}
+.homeabout .container {
+    width: 94%;
+}
+.whatwedo .col-lg-8.col-md-12.col-sm-12.ps-lg-5 {
+    padding: 0;
+}
+.about-content p {
+    line-height: 30px;
+}
+.homeabout img {
+    height: 500px;
+}
+.whatwedo {
+    padding-bottom: 1px;
+}
+.whatwedo-mobienav {
+    padding: 0;
+}
+.responsive-menu button {
+    background: no-repeat;
+    border: none;
+}
+.investment {
+    background: url(../images/investment-bobile-bg.jpg);
+    padding: 58% 0 50px;
+}
+.team .heading {
+    margin-bottom: 35px;
+}
+.container{
+    max-width: 100%;
+}
+.portfolio .row:nth-child(even) figure span:before {
+    left: 20px !important;
+}
+
+button.slick-next.slick-arrow {
+    right: 0;
+}
+.portfolio .container {
+    width: 95%;
+}
+.team .container {
+    width: 60%;
+}
+.investment .container {
+    width: 90%;
+}
+.breadcrumb-caption {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 100%;
+    width: 100%;
+}
+.secondary-container.team .container {
+    width: 80%;
+}
+.secondary-container.team .heading {
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+.team-slider {
+    margin-bottom: 50px;
+}
+.secondary-container.team {
+    padding: 60px 0 0;
+}
+footer figure img {
+    width: auto;
+}
+footer ul.footer-contact li {
+    width: 100%;
+}
+footer ul.footer-contact li:last-child {
+    text-align: center;
+}
+footer ul.footer-contact li:last-child:before {
+display:none;
+}
+footer ul.footer-contact {
+    display: block;
+}
+footer ul.footer-contact li:first-child {
+    text-align: center;
+    margin-bottom: 15px;
+}
+}
+
+
+@media screen and (max-width: 568px) {
+.logo {
+    width: 50%;
+}
+.logo img {
+    width: 100%;
+}
+.slider-caption h1 {
+    font-size: 38px;
+    line-height: 50px;
+}
+.slider-caption {
+    top: 50%;
+    width: 100%;
+}
+.mainslider img {
+    height: 550px;
+}
+.homeabout img {
+    height: 320px;
+    object-fit: cover;
+}
+.heading {
+    font-size: 40px;
+}
+.whatwedo-mobienav {
+    padding: 0;
+}
+.whatwedo-mobienav .navbar {
+    margin-bottom: 15px;
+}
+.investment {
+    padding: 50% 0 50px;
+}
+.team {
+    padding: 50px 0;
+}
+.team .container {
+    width: 70%;
+}
+.investment .leftheading {
+    font-size: 45px;
+}
+footer ul.footer-contact li:last-child:before {
+    right: -29px;
+}
+.breadcrumb img {
+    height: 400px;
+}
+.breadcrumb-caption h1 {
+    font-size: 50px;
+}
+.secondary-container.team .heading {
+    margin-bottom: 25px;
+    font-size: 35px;
+}
+.secondary-container.team {
+    padding: 40px 0 0;
+}
+.breadcrumb-caption h1 {
+    font-size: 45px;
+}
+.secondary-container.contactus ul {
+    width: 70%;
+}
+.portfolio ul#pills-tab li a {
+    padding: 8px 15px;
+    font-size: 15px;
+    margin: 0 4px;
+}
+.portfolio-cnt {
+    margin-bottom: 50px;
+}
+
+.about-whatwedo button.slick-prev.slick-arrow, .about-whatwedo button.slick-next.slick-arrow {
+    bottom: 47%;
+    height: 45px;
+    width: 45px;
+}
+.whatwedolist img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+.about-whatwedo button.slick-prev.slick-arrow {
+    right: 85px;
+    left: auto;
+}
+.about-whatwedo button.slick-next.slick-arrow {
+    right: 28px;
+    left: auto;
+}
+.whatwedolist-info {
+    padding: 30px;
+}
+
+}
+
+
+@media screen and (max-width: 415px) {
+.slider-caption h1 {
+    font-size: 25px;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+.mainslider img {
+    height: 400px;
+}
+.slider-caption .btn-primary {
+    border: 1px solid var(--white);
+    color: var(--white);
+    padding: 12px 20px;
+}
+.homeabout {
+    padding: 30px 0;
+}
+.about-content .leftheading{
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+.investment .leftheading {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+.investment .container {
+    width: 100%;
+}
+.heading {
+    font-size: 30px;
+    line-height: 38px;
+}
+footer figure img {
+    width: 100%;
+}
+.breadcrumb img {
+    height: 300px;
+}
+.aboutustop-content a.btn {
+    margin-top: 0;
+}
+.secondary-container.team .container {
+    width: 100%;
+}
+.secondary-container.team .heading {
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+.team-slider {
+    margin-bottom: 30px;
+}
+.breadcrumb-caption h1 {
+    font-size: 30px;
+}
+.secondary-container.contactus a img {
+    width: 90%;
+}
+.secondary-container.contactus h2.leftheading {
+    font-size: 22px;
+    line-height: 30px;
+}
+.secondary-container.contactus ul {
+    width: 100%;
+    margin: 40px 0 0;
+}
+.portfolio ul#pills-tab li a {
+    padding: 6px 15px;
+    font-size: 13px;
+    margin: 0 0px;
+}
+footer ul.footer-contact li:last-child {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+}
+.whatwedolist-info p {
+    margin: 20px 0 0;
+}
+.about-whatwedo button.slick-prev.slick-arrow, .about-whatwedo button.slick-next.slick-arrow {
+    bottom: 48%;
+}
+.aboutustop img {
+    height: 320px;
+}
+
+
+.team-list h3 {
+    font-size: 22px;
+}
+.team-list h3 span {
+    font-size: 14px;
+}
+.secondary-container.team .heading {
+    font-size: 26px;
+}
+.whatwedo-mobienav .navbar h3 {
+    font-size: 16px;
+}
+.whatwedo-cnt h3 {
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    font-size: 16px;
+}
+
+.slick-dots li button, .slick-dots .slick-active button {
+    width: 12px;
+    height: 12px;
+}
+.portfolio ul#pills-tab li a {
+    padding: 6px 12px;
+}
+}
+
+@media only screen and (max-width: 395px) {
+    .whatwedolist img {
+        height: 320px;
+    }
+    .about-whatwedo button.slick-prev.slick-arrow, .about-whatwedo button.slick-next.slick-arrow {
+        bottom: 60%;
+    }
+    .about-whatwedo button.slick-prev.slick-arrow {
+        right: 68px;
+        left: auto;
+    }
+    .about-whatwedo button.slick-next.slick-arrow {
+        right: 16px;
+        left: auto;
+    }
+}
